@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module2LabB.MainPage">
+
+    <ScrollView>
+        <StackLayout Padding="30,0" Spacing="25">
+            <Image Source="dotnet_bot.png" HeightRequest="185" Aspect="AspectFit" SemanticProperties.Description="dot net bot in a race car number eight" />
+            <Label Text="Enter Your Birthday" HorizontalOptions="Center" />
+            <DatePicker x:Name="BirthdayPicker" />
+
+            <Label Text="Select Your Country" HorizontalOptions="Center" />
+            <Picker x:Name="CountryPicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>United States</x:String>
+                        <x:String>United Kingdom</x:String>
+                        <x:String>Canada</x:String>
+                        <x:String>Germany</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button Text="Calculate Age" Clicked="OnCalculateAgeClicked" HorizontalOptions="Center" />
+
+            <Label x:Name="ResultLabel" HorizontalOptions="Center" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
